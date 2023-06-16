@@ -10,3 +10,22 @@ function getComputerChoice() {
         return "scissors"
     }
 }
+
+function playRound(computerChoice, playerChoice) {
+    console.log(computerChoice)
+    console.log(playerChoice)
+    let player = playerChoice.toLowerCase();
+    if (player==computerChoice) {
+        return "Draw"
+    }
+    else if ((player=="rock" && computerChoice=="paper") || (player=="paper" && computerChoice=="scissors") || (player=="scissors" && computerChoice=="rock")) {
+        return "You win"
+    }
+    else if ((player=="paper" && computerChoice=="rock") || (player=="rock" && computerChoice=="scissors") || (player=="scissors" && computerChoice=="paper")) {
+        return "You loseeeee, loserrrr!"
+    }
+}
+
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
