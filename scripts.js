@@ -12,8 +12,6 @@ function getComputerChoice() {
 }
 
 function playRound(computerChoice, playerChoice) {
-    console.log(computerChoice)
-    console.log(playerChoice)
     let player = playerChoice.toLowerCase();
     if (player==computerChoice) {
         return "Draw"
@@ -26,6 +24,10 @@ function playRound(computerChoice, playerChoice) {
     }
 }
 
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+function game() {
+    const playerSelection = prompt("Rock, paper or scissors?")
+    const computerSelection = getComputerChoice();
+    console.log(playRound(playerSelection, computerSelection));
+}
+
+game()
